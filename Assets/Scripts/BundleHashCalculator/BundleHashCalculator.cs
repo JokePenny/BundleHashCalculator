@@ -19,10 +19,7 @@ namespace Scripts.BundleHashCalculator
     {
         public List<InfoDeveloper> Developers;
         public NameDeveloper SelectedDeveloperPreset;
-
-        [Header("Название бандла в папке AssetBundle")]
         public string NameBundle;
-        [Header("Хэши, которые надо вставить в versionBundle")]
         public string HashAndroid;
         public string HashIOS;
         public string HashWindows;

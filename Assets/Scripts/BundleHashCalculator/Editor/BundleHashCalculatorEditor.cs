@@ -9,14 +9,11 @@ namespace Scripts.BundleHashCalculator
     {
         private BundleHashCalculator _hashBundleCalculator;
 
-        private SerializedObject _objectSO;
-        private ReorderableList _listInfoDevelopers;
         private bool _isEnableSettings;
         private bool _isOperationSuccess = false;
         private bool _isCallOperation = false;
 
         private string _cachBundleName;
-        private string _bundleFolder;
         private NameDeveloper _cachNameDeveloper;
 
         private void OnEnable()
@@ -53,8 +50,8 @@ namespace Scripts.BundleHashCalculator
             EditorGUILayout.EndHorizontal();
             EditorGUILayout.Space();
 
-            _hashBundleCalculator.SelectedDeveloperPreset = (NameDeveloper)EditorGUILayout.EnumPopup("Пресет разработчика", _hashBundleCalculator.SelectedDeveloperPreset);
-            _hashBundleCalculator.NameBundle = EditorGUILayout.TextField("Имя бандла", _hashBundleCalculator.NameBundle);
+            _hashBundleCalculator.SelectedDeveloperPreset = (NameDeveloper)EditorGUILayout.EnumPopup("Developer preset", _hashBundleCalculator.SelectedDeveloperPreset);
+            _hashBundleCalculator.NameBundle = EditorGUILayout.TextField("Bundle name", _hashBundleCalculator.NameBundle);
 
             bool isSelectPresetDeveloper = _hashBundleCalculator.SelectedDeveloperPreset != NameDeveloper.None;
             bool isExistNameBundle = !string.IsNullOrEmpty(_hashBundleCalculator.NameBundle);
